@@ -13,9 +13,12 @@ julia> using AbstractInstances
 julia> AbstractInstances.oftype(Number) isa Number
 true
 
-julia> AbstractInstances.oftype(Number) == AbstractInstances.oftype(Number)
-false
-
 julia> AbstractInstances.oftype(Number) === AbstractInstances.oftype(Number)
 false
+
+julia> AbstractInstances.singleton(Number) isa Number
+true
+
+julia> AbstractInstances.singleton(Number) === AbstractInstances.singleton(Number)
+true
 ```
